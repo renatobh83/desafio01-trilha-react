@@ -2,5 +2,21 @@
 
 Essa será uma aplicação onde o seu principal objetivo é refatorar uma página para listagem de filmes de acordo com gênero.
 
+
+npm install
+#or
+yarn 
+
+
+
+## Run App
+npm run dev
+# or
+yarn dev
+
 ### Fake API com JSON Server
+npm run server
+# or
 yarn serve
+
+
