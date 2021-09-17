@@ -2,14 +2,14 @@
 
 Essa será uma aplicação onde o seu principal objetivo é refatorar uma página para listagem de filmes de acordo com gênero.
 
-
+### Install all dependencies
 npm install
 #or
 yarn 
 
 
 
-## Run App
+### Run App
 npm run dev
 # or
 yarn dev
