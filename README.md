@@ -5,22 +5,19 @@ Essa será uma aplicação onde o seu principal objetivo é refatorar uma pá
 ### Install all dependencies
 
 npm install
-# or
+### or
 yarn 
 
-npm run dev
-# or
-yarn dev
 
 
 ### Run App
 npm run dev
-# or
+### or
 yarn dev
 
 ### Fake API com JSON Server
 npm run server
-# or
+### or
 yarn serve
 
 
