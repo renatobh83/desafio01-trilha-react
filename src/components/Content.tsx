@@ -36,7 +36,7 @@ function ContentComponent({ movies }: MovieProps) {
             <List
               height={500}
               rowHeight={500}
-              width={200}
+              width={250}
               overscanColumnCount={4}
               rowCount={movies.length}
               rowRenderer={rowRenderer}
