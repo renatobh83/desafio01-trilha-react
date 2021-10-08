@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Button } from "../components/Button";
 import "../styles/sidebar.scss";
 interface sideBarProps {
@@ -9,7 +10,11 @@ interface sideBarProps {
   handleClickButton: (id: number) => void;
   selectedGenreId: number;
 }
-export function SideBar(props: sideBarProps) {
+function SideBarComponent({
+  genres,
+  selectedGenreId,
+  handleClickButton,
+}: sideBarProps) {
   return (
     <nav className="sidebar">
       <span>
@@ -17,16 +22,19 @@ export function SideBar(props: sideBarProps) {
       </span>
 
       <div className="buttons-container">
-        {props.genres.map((genre) => (
+        {genres.map((genre) => (
           <Button
             key={String(genre.id)}
             title={genre.title}
             iconName={genre.name}
-            onClick={() => props.handleClickButton(genre.id)}
-            selected={props.selectedGenreId === genre.id}
+            onClick={() => handleClickButton(genre.id)}
+            selected={selectedGenreId === genre.id}
           />
         ))}
       </div>
     </nav>
   );
 }
+export const SideBar = memo(SideBarComponent, (prevProps, nextProps) => {
+  return Object.is(prevProps.genres, nextProps.genres);
+});
